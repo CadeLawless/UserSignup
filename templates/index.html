@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crocenterin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <title>User Sign Up</title>
+</head>
+<style>
+  .error {
+    color: red;
+    margin-left: 3px;
+  }
+  * {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  .flex-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    padding: 10px;
+    border: solid 3px black;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+</style>
+<body>
+  <div class="flex-container">
+    <div class="form">
+      <h1>User Sign Up</h1>
+      <form method="POST" action="/">
+        <label>Username:</label><br>
+        <input type="text" value="{{username}}" name="username">            <span class="error">{{usernameError}}</span><br><br>
+        <label>Email:</label><br>
+        <input type="text" value="{{email}}" name="email"><span             class="error">{{emailError}}</span><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password"><span class="error">        {{passwordError}}</span><br><br>
+        <label>Confirm Password:</label><br>
+        <input type="password" name="confirmPassword"><br><br>
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
